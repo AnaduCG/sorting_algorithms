@@ -1,6 +1,23 @@
 #include "sort.h"
 #include <stdlib.h>
 #include <unistd.h>
+
+/**
+ *swap_array - function that implements the swapping of values in an array
+ *@num1: number to be swapped
+ *@num2: number to be swapped
+ *
+ *
+ */
+
+void swap_array(int *num1, int *num2)
+{
+	int temp = *num1;
+
+	*num1 = *num2;
+	*num2 = temp;
+}
+
 /**
  *bubble_sort - function that implements the bubble sort algorithm in c
  *@array: array to sort

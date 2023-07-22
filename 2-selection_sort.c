@@ -1,6 +1,22 @@
 #include "sort.h"
 
 /**
+ *swap_array - function that implements the swapping of values in an array
+ *@num1: number to be swapped
+ *@num2: number to be swapped
+ *
+ *
+ */
+
+void swap_array(int *num1, int *num2)
+{
+	int temp = *num1;
+
+	*num1 = *num2;
+	*num2 = temp;
+}
+
+/**
  *selection_sort - function that sorts an array in an
  *		ascending order using the selection
  *		sort algorithm

@@ -1,4 +1,6 @@
 #include "sort.h"
+#include <stdlib.h>
+#include <unistd.h>
 /**
  *bubble_sort - function that implements the bubble sort algorithm in c
  *@array: array to sort

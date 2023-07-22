@@ -1,5 +1,4 @@
 #include "sort.h"
-
 /**
  *swap_array - function that implements the swapping of values in an array
  *@num1: number to be swapped

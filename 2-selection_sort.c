@@ -16,19 +16,18 @@ void swap_array(int *num1, int *num2)
 	*num2 = temp;
 }
 
-/**
- *selection_sort - function that sorts an array in an
- *		ascending order using the selection
- *		sort algorithm
- *@array: array to be sorted
- *@size: size and length of the array to be sorted
+/*
+ * selection_sort - Sorts an array of integers in ascending order
+ * using the Selection sort algorithm
+ * @array: Pointer to the array to be sorted
+ * @size: Number of elements in the array
  *
  */
 void selection_sort(int *array, size_t size)
 {
-
-int *min;
 	size_t i, j;
+	int *min;
+
 
 	if (array == NULL || size < 2)
 		return;
@@ -41,7 +40,7 @@ int *min;
 
 		if ((array + i) != min)
 		{
-			swap_ints(array + i, min);
+			swap_array(array + i, min);
 			print_array(array, size);
 		}
 	}

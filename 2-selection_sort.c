@@ -22,14 +22,12 @@ void swap_array(int *num1, int *num2)
  * @array: Pointer to the array to be sorted
  * @size: Number of elements in the array
  *
- * Description: This function implements the Selection sort algorithm
- * to sort the given array in ascending order.
- * It also prints the array after each swap operation.
  */
 void selection_sort(int *array, size_t size)
 {
 	size_t i, j;
 	int *min;
+
 
 	if (array == NULL || size < 2)
 		return;

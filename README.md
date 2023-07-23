@@ -1,162 +1,43 @@
-#0x1B. C - Sorting algorithms & Big O
-#0. Bubble sort
-Write a function that sorts an array of integers in ascending order using the Bubble sort algorithm
+# 0x1B. C - Sorting Algorithms & Big O
+This project focuses on implementing various sorting algorithms in C and understanding their efficiency through `Big O notation`. Sorting algorithms are essential in computer science as they help arrange elements in a specific order, facilitating efficient searching and retrieval of data. This project explores at least four different sorting algorithms, explains the concept of `Big O notation`, guides in evaluating the time complexity of algorithms, helps select the best sorting algorithm for a given input, and discusses stable sorting algorithms.
 
-Prototype: void bubble_sort(int *array, size_t size);
-You’re expected to print the array after each time you swap two elements (See example below)
-Write in the file 0-O, the big O notations of the time complexity of the Bubble sort algorithm, with 1 notation per line:
+## Table of Contents
+ - Sorting Algorithms
+ - Big O Notation
+ - Evaluating Time Complexity
+ - Selecting the Best Sorting Algorithm
+ - Stable Sorting Algorithm
 
-in the best case
-in the average case
-in the worst case
 
-#1. Insertion sort
-Write a function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm
+### 1. Sorting Algorithms
+This project will implement at least four different sorting algorithms, including but not limited to:
 
-Prototype: void insertion_sort_list(listint_t **list);
-You are not allowed to modify the integer n of a node. You have to swap the nodes themselves.
-You’re expected to print the list after each time you swap two elements (See example below)
-Write in the file 1-O, the big O notations of the time complexity of the Insertion sort algorithm, with 1 notation per line:
+ 1. Bubble Sort
+ 2. Insertion Sort
+ 3. Selection Sort
+ 4. Merge Sort
+ 5. Quick Sort
 
-in the best case
-in the average case
-in the worst case
+Each algorithm will be demonstrated using C code examples to show their working and performance.
 
-#2. Selection sort
-Write a function that sorts an array of integers in ascending order using the Selection sort algorithm
+## 2. Big O Notation
+`Big O notation` is a way of expressing the upper bound of the time or space complexity of an algorithm. It provides an estimate of how the algorithm's performance scales with the size of the input data. Common notations include O(1), O(log n), O(n), O(n log n), O(n^2), etc.
 
-Prototype: void selection_sort(int *array, size_t size);
-You’re expected to print the array after each time you swap two elements (See example below)
-Write in the file 2-O, the big O notations of the time complexity of the Selection sort algorithm, with 1 notation per line:
+## 3. Evaluating Time Complexity
+To evaluate the time complexity of an algorithm, analyze the number of basic operations (comparisons, assignments) performed concerning the size of the input. Ignore constants and lower-order terms to determine the dominant term that defines the algorithm's behavior with larger inputs.
 
-in the best case
-in the average case
-in the worst case
+For example, the time complexity of a basic linear search algorithm is O(n), where "n" is the size of the input.
 
-#3. Quick sort
-Write a function that sorts an array of integers in ascending order using the Quick sort algorithm
+## 4. Selecting the Best Sorting Algorithm
+The efficiency of sorting algorithms depends on the type and size of the data being sorted. Some sorting algorithms perform better on certain data distributions or data sizes. For example, Merge Sort and Quick Sort are generally more efficient on larger datasets, while Insertion Sort may perform better on small, nearly sorted datasets.
 
-Prototype: void quick_sort(int *array, size_t size);
-You must implement the Lomuto partition scheme.
-The pivot should always be the last element of the partition being sorted.
-You’re expected to print the array after each time you swap two elements (See example below)
-Write in the file 3-O, the big O notations of the time complexity of the Quick sort algorithm, with 1 notation per line:
+It's essential to analyze the characteristics of the data and consider the algorithm's time complexity to select the most appropriate sorting algorithm for the specific use case.
 
-in the best case
-in the average case
-in the worst case
+## 5. Stable Sorting Algorithm
+A stable sorting algorithm maintains the relative order of elements with equal keys after sorting. In other words, if two elements have the same key value and appear in a certain order in the input, a stable sorting algorithm will keep that order in the output.
 
-#4. Shell sort - Knuth Sequence
-#advanced
-Write a function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence
+###### " For example: if we have a list of records with names and ages, and we sort them by name, a stable sorting algorithm will preserve the relative order of people with the same name."
 
-Prototype: void shell_sort(int *array, size_t size);
-You must use the following sequence of intervals (a.k.a the Knuth sequence):
-n+1 = n * 3 + 1
-1, 4, 13, 40, 121, ...
-You’re expected to print the array each time you decrease the interval (See example below).
-No big O notations of the time complexity of the Shell sort (Knuth sequence) algorithm needed - as the complexity is dependent on the size of array and gap
+Stability can be important in certain applications where the original order holds valuable information.
 
-#5. Cocktail shaker sort
-#advanced
-Write a function that sorts a doubly linked list of integers in ascending order using the Cocktail shaker sort algorithm
-
-Prototype: void cocktail_sort_list(listint_t **list);
-You are not allowed to modify the integer n of a node. You have to swap the nodes themselves.
-You’re expected to print the list after each time you swap two elements (See example below)
-Write in the file 101-O, the big O notations of the time complexity of the Cocktail shaker sort algorithm, with 1 notation per line:
-
-in the best case
-in the average case
-in the worst case
-
-#6. Counting sort
-#advanced
-Write a function that sorts an array of integers in ascending order using the Counting sort algorithm
-
-Prototype: void counting_sort(int *array, size_t size);
-You can assume that array will contain only numbers >= 0
-You are allowed to use malloc and free for this task
-You’re expected to print your counting array once it is set up (See example below)
-This array is of size k + 1 where k is the largest number in array
-Write in the file 102-O, the big O notations of the time complexity of the Counting sort algorithm, with 1 notation per line:
-
-in the best case
-in the average case
-in the worst case
-
-#7. Merge sort
-#advanced
-Write a function that sorts an array of integers in ascending order using the Merge sort algorithm
-
-Prototype: void merge_sort(int *array, size_t size);
-You must implement the top-down merge sort algorithm
-When you divide an array into two sub-arrays, the size of the left array should always be <= the size of the right array. i.e. {1, 2, 3, 4, 5} -> {1, 2}, {3, 4, 5}
-Sort the left array before the right array
-You are allowed to use printf
-You are allowed to use malloc and free only once (only one call)
-Output: see example
-Write in the file 103-O, the big O notations of the time complexity of the Merge sort algorithm, with 1 notation per line:
-
-in the best case
-in the average case
-in the worst case
-
-#8. Heap sort
-#advanced
-Write a function that sorts an array of integers in ascending order using the Heap sort algorithm
-
-Prototype: void heap_sort(int *array, size_t size);
-You must implement the sift-down heap sort algorithm
-You’re expected to print the array after each time you swap two elements (See example below)
-Write in the file 104-O, the big O notations of the time complexity of the Heap sort algorithm, with 1 notation per line:
-
-in the best case
-in the average case
-in the worst case
-
-#9. Radix sort
-#advanced
-Write a function that sorts an array of integers in ascending order using the Radix sort algorithm
-
-Prototype: void radix_sort(int *array, size_t size);
-You must implement the LSD radix sort algorithm
-You can assume that array will contain only numbers >= 0
-You are allowed to use malloc and free for this task
-You’re expected to print the array each time you increase your significant digit (See example below)
-
-#10. Bitonic sort
-#advanced
-Write a function that sorts an array of integers in ascending order using the Bitonic sort algorithm
-
-Prototype: void bitonic_sort(int *array, size_t size);
-You can assume that size will be equal to 2^k, where k >= 0 (when array is not NULL …)
-You are allowed to use printf
-You’re expected to print the array each time you swap two elements (See example below)
-Output: see example
-Write in the file 106-O, the big O notations of the time complexity of the Bitonic sort algorithm, with 1 notation per line:
-
-in the best case
-in the average case
-in the worst case
-
-#11. Quick Sort - Hoare Partition scheme
-#advanced
-Write a function that sorts an array of integers in ascending order using the Quick sort algorithm
-
-Prototype: void quick_sort_hoare(int *array, size_t size);
-You must implement the Hoare partition scheme.
-The pivot should always be the last element of the partition being sorted.
-You’re expected to print the array after each time you swap two elements (See example below)
-Write in the file 107-O, the big O notations of the time complexity of the Quick sort algorithm, with 1 notation per line:
-
-in the best case
-in the average case
-in the worst case
-
-#12. Dealer
-Write a function that sorts a deck of cards.
-
-Prototype: void sort_deck(deck_node_t **deck);
-You are allowed to use the C standard library function qsort
-Please use the following data structures:
+This project "``0x1B. C - Sorting Algorithms & Big O``" will delve into the above topics, providing in-depth explanations and C code examples to help you understand sorting algorithms, `Big O notation`, time complexity evaluation, and stable sorting algorithms. Feel free to explore the code and concepts further to deepen your understanding of sorting algorithms and their efficiency.

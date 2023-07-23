@@ -1,10 +1,6 @@
 #ifndef SORT_H
 #define SORT_H
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <stdbool.h>
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -18,6 +14,7 @@ const int n;
 struct listint_s *prev;
 struct listint_s *next;
 } listint_t;
+
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
@@ -45,5 +42,6 @@ void swap_ints(int *a, int *b);
 int hoare_partition(int *array, size_t size, int left, int right);
 void hoare_sort(int *array, size_t size, int left, int right);
 void swap(int *num1, int *num2);
+
 
 #endif /* SORT_H */

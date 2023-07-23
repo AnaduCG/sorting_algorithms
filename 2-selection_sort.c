@@ -41,7 +41,7 @@ int *min;
 
 		if ((array + i) != min)
 		{
-			swap_ints(array + i, min);
+			swap_array(array + i, min);
 			print_array(array, size);
 		}
 	}
